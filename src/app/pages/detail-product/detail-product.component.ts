@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Product } from 'src/app/mocks/products-mock';
+import { ProductsServiceTsService } from 'src/app/services/products.service.ts.service';
 
 @Component({
   selector: 'app-detail-product',
@@ -6,17 +8,25 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./detail-product.component.scss']
 })
 export class DetailProductComponent {
-  @Input() product: any = '';
+  product: Product = {
+    name: '',
+    category: '',
+    image: '',
+    adjetive: '',
+    description: '',
+    price: 0
+  };
 
-  @Output() closeDetail = new EventEmitter();
-  @Output() addProduct = new EventEmitter();
+  constructor(private productsServiceTsService:ProductsServiceTsService) { }
 
-  closeDetailFN() {
-    this.closeDetail.emit();
+  ngOnInit(): void {
+    this.productsServiceTsService.getOneItem().subscribe(
+      (product: any) => {
+        this.product = product;
+      },
+      error => {
+        console.error('Error al obtener product:', error);
+      }
+    );
   }
-
-  addProductFN(){
-    this.addProduct.emit(this.product)
-  }
-
 }

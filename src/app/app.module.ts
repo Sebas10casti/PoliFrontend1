@@ -7,13 +7,14 @@ import { TablerIconsModule } from 'angular-tabler-icons';
 import { IconCamera, IconHeart, IconBrandGithub } from 'angular-tabler-icons/icons';
 import { LoginComponent } from './pages/login/login.component';
 import { ListComponent } from './pages/list/list.component';
-import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 import { ListCartComponent } from './pages/list-cart/list-cart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ClientComponent } from './layaout/client/client.component';
 import { ProductComponent } from './components/product/product.component';
+import { DetailProductComponent } from './pages/detail-product/detail-product.component';
+import { AdminProductsComponent } from './pages/admin-products/admin-products.component';
 
 
 const icons = {
@@ -28,13 +29,14 @@ const icons = {
     AppComponent,
     LoginComponent,
     ListComponent,
-    DetailProductComponent,
     ProductComponent,
     ListCartComponent,
     NavbarComponent,
     FooterComponent,
     SidebarComponent,
     ClientComponent,
+    DetailProductComponent,
+    AdminProductsComponent,
   ],
   imports: [
     BrowserModule,

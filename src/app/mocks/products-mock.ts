@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-interface Product{
+export interface Product{
   name: string
   category: string,
   image: string
@@ -9,7 +9,7 @@ interface Product{
   price: number,
 };
 
-function generateItem(){
+export function generateItem(){
   const { commerce, image, number}  = faker;
   const indexItem = number.int({max:3, min: 0});
   const category =  ['Vehiculos', 'Tecnologia', 'Deportes', 'Hogar'][indexItem];

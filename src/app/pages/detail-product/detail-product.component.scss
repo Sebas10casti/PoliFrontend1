@@ -1,10 +1,13 @@
-.panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 50%; /* Ajusta el ancho del panel según tus necesidades */
-  background-color: #f1f1f1;
-  z-index: 10;
+.container-fluid {
+  margin-top: 100px;
 }
 
+li {
+  font-weight: 800;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,0 +1,20 @@
+@import '../../../styles.scss';
+
+.container-fluid {
+  margin-top: 100px;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+
+.bi-pencil-square{
+  color: $color3;
+}
+
+.bi-trash-fill{
+  color: red;
+}

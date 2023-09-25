@@ -16,16 +16,8 @@
     </div>
   </div>
 
-  <!-- Detalle del componente -->
-  <app-detail-product
-    [product]="itemDetail"
-    [hidden]="!showDetailItem"
-    (closeDetail)="closeDetail()"
-    (addProduct)="addItemCar($event)"
-  ></app-detail-product>
-
   <!-- lista de compras  -->
-  <app-list-cart [hidden]="!showCart" (closeCart)="toogleCart(false)">
-  </app-list-cart>
+  <!-- <app-list-cart [hidden]="!showCart" (closeCart)="toogleCart(false)">
+  </app-list-cart> -->
 
 </app-client>

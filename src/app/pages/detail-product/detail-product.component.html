@@ -1,34 +1,47 @@
-<div class="panel">
-  <div class="pointer btn btn-danger rounded-0" (click)="closeDetailFN()">
-    &times;
-  </div>
-  <div class="card">
-    <img class="card-img-top" [src]="product.image" alt="Card image cap" />
-    <div class="card-body">
-      <h5 class="card-title">{{ product?.name }}</h5>
-      <p class="card-text">{{ product.adjetive }}</p>
-      <p class="card-text">
-        <b><i class="ti ti-file-description"></i> Descripción:</b>
-        {{ product.description }}
-      </p>
-      <p class="card-text">
-        <b><i class="ti ti-file-description"></i> Material:</b>
-        {{ product.material }}
-      </p>
-      <p
-        ><b><i class="ti ti-category"></i> Categoria:</b>
-        {{ product.category }}</p
-      >
-      <p class="price"
-        ><b><i class="ti ti-tag"> </i>Precio: </b>
-        {{ product.price | currency : "COP $" : "symbol" : "0.0-0" }}</p
-      >
+<app-navbar>
+</app-navbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 col-6 d-flex justify-content-center align-items-center">
+      <img [src]="product.image">
     </div>
-
-    <div class="card-footer text-center">
-      <button class="btn btn-dark" (click)="addProductFN()">
-        <i class="ti ti-plus"></i> Añadir al carro
-      </button>
+    <div class="col-6 col-6 d-flex justify-content-center align-items-center">
+      <ul class="list-group border-0 text-center">
+        <li class="list-group-item border-0">{{product.name}}</li>
+        <li class="list-group-item border-0">{{product.category}}</li>
+        <li class="list-group-item border-0">{{product.adjetive}}</li>
+        <li class="list-group-item border-0">$ {{product.price}}</li>
+        <li class="list-group-item border-0"><button class="btn btn-dark bg-color6">
+          <i class="ti ti-plus"></i> Agregar
+        </button></li>
+      </ul>
+    </div>
+    <div class="col-12 mt-4 mb-4">
+      <h2 class="border-bottom mt-4 mb-4">Descripcion</h2>
+      <p>{{product.description}}</p>
     </div>
   </div>
 </div>
+
+
+<footer class="bg-color5  text-light">
+  <div class=" d-flex justify-content-between align-items-center p-3">
+    <div class="company-information text-center">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-shop fs-1"></i>
+      </a>
+      <p class="m-0 fs-3">Supermercado la Economía</p>
+    </div>
+
+    <div class="social-media fs-4 mr-4">
+      <h5 class="m-0 fs-3 mb-2">Encuéntranos en:</h5>
+      <i class="bi bi-tiktok mx-1"></i>
+      <i class="bi bi-instagram mx-1"></i>
+      <i class="bi bi-twitter mx-1"></i>
+    </div>
+  </div>
+  <div class="w-100 text-center">
+    Diseñado con ❤️
+  </div>
+</footer>
+

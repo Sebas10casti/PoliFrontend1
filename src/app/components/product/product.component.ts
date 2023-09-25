@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -10,11 +11,15 @@ export class ProductComponent {
   @Output() addProduct = new EventEmitter();
   @Output() openProduct = new EventEmitter();
 
+  constructor(private router: Router) { }
+
   addProductFN() {
     this.addProduct.emit(this.item);
   }
 
   openProductFN(){
-    this.openProduct.emit(this.item);
+    // Aquí defines la ruta a la que quieres navegar
+    const productUrl = `/detail`;
+    this.router.navigate([productUrl]);
   }
 }
