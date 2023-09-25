@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, of } from 'rxjs';
 import { generateManyItems } from '../mocks/products-mock';
+import { generateManyItemsCategory } from '../mocks/products-category-mocks';
 
 
 @Injectable({
@@ -29,5 +30,10 @@ export class ProductsServiceTsService {
 
   listproducts(){
     return of(generateManyItems());
+  }
+
+
+  listCategory(){
+    return of(generateManyItemsCategory());
   }
 }

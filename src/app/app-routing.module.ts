@@ -7,7 +7,7 @@ import { ListCartComponent } from './pages/list-cart/list-cart.component';
 const routes: Routes = [
   { path: '', redirectTo: 'catalogo', pathMatch: 'full' },
   { path: 'admin/login', component: LoginComponent },
-  { path: 'admin/gestor-archivos', component: LoginComponent },
+  { path: 'admin/gestor-productos', component: LoginComponent },
   { path: 'catalogo', component: ListComponent },
   { path: 'cart', component: ListCartComponent}
 ];

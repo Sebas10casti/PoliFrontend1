@@ -1,0 +1,8 @@
+
+#content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 250px; /* Deja espacio para el sidebar */
+  overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
+}

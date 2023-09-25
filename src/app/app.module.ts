@@ -8,13 +8,12 @@ import { IconCamera, IconHeart, IconBrandGithub } from 'angular-tabler-icons/ico
 import { LoginComponent } from './pages/login/login.component';
 import { ListComponent } from './pages/list/list.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
-import { ProductComponent } from './pages/product/product.component';
 import { ListCartComponent } from './pages/list-cart/list-cart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ClientComponent } from './layout/client/client.component';
-import { AdminComponent } from './layout/admin/admin.component';
+import { ClientComponent } from './layaout/client/client.component';
+import { ProductComponent } from './components/product/product.component';
 
 
 const icons = {
@@ -36,7 +35,6 @@ const icons = {
     FooterComponent,
     SidebarComponent,
     ClientComponent,
-    AdminComponent
   ],
   imports: [
     BrowserModule,

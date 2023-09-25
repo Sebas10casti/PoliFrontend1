@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+// Definición de variables de colores
+$color1: #DDE160;
+$color2: #87CC72;
+$color3: #3CAE84;
+$color4: #008C89;
+$color5: #186A79;
+$color6: #2f4858;
+
+// Clases para cambiar el fondo y el color del texto
+// Clases para cambiar el fondo y el color del texto
+.bg-color1 {
+  background-color: $color1 !important;
+}
+
+.text-color1 {
+  color: $color1 !important;
+}
+
+.bg-color2 {
+  background-color: $color2 !important;
+}
+
+.text-color2 {
+  color: $color2 !important;
+}
+
+.bg-color3 {
+  background-color: $color3 !important;
+}
+
+.text-color3 {
+  color: $color3 !important;
+}
+
+.bg-color4 {
+  background-color: $color4 !important;
+}
+
+.text-color4 {
+  color: $color4 !important;
+}
+
+.bg-color5 {
+  background-color: $color5 !important;
+}
+
+.text-color5 {
+  color: $color5 !important;
+}
+
+.bg-color6 {
+  background-color: $color6 !important;
+}
+
+.bg-none {
+  background-color: transparent !important;
+}
+
+.text-color6 {
+  color: $color6 !important;
+}
+
+
