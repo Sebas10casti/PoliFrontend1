@@ -12,10 +12,12 @@ export class NavbarComponent {
   counter: number = 0;
   items: any = [];
   itemsFilters: any = [];
+  hiddeCar: boolean= false;
 
   constructor(private productsServiceTsService:ProductsServiceTsService,  private router: Router){}
 
   ngOnInit(): void {
+    this.hiddeCarFn();
     this.productsServiceTsService.listproducts().subscribe({next: (data: any) => {this.items = data; this.itemsFilters = data}})
     this.productsServiceTsService.myCart$.subscribe(products => {
       this.counter = products.length;
@@ -24,5 +26,9 @@ export class NavbarComponent {
 
   toggleCart(state: boolean){
     this.showCart = state;
+  }
+
+  hiddeCarFn(): void{
+    this.hiddeCar = window.location.pathname.includes('admin');
   }
 }

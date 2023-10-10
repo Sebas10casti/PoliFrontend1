@@ -17,7 +17,8 @@ export class LoginComponent {
     this.isLogued = this.name === 'admin';
     this.isLogued = this.pwd === 'admin';
     if(this.isLogued){
-      this.router.navigate(['/catalogo']);
+      localStorage.setItem('Poli-Test-loguin', 'tokenSuccess')
+      this.router.navigate(['/admin/products']);
     }else{
       this.showMessage = true;
       this.name = '';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-
+declare const $: any;
 export interface Producto {
   id: number;
   nombre: string;

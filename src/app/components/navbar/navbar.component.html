@@ -9,7 +9,7 @@
     <h1 class="text-white text-center flex-fill d-none d-lg-block fs-3">Supermercado la Economía</h1>
 
     <!-- Elemento a la derecha -->
-    <button type="button" class="btn btn-primary position-relative me-2 border-0 bg-color4" (click)="toggleCart(true)">
+    <button *ngIf="!hiddeCar" type="button" class="btn btn-primary position-relative me-2 border-0 bg-color4" (click)="toggleCart(true)">
       <i class="ti ti-shopping-cart fs-1"></i>
       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
         {{ counter }}

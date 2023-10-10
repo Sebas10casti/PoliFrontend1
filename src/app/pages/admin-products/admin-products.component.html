@@ -2,6 +2,13 @@
 </app-navbar>
 <div class="container-fluid">
   <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-8 mb-4">
+      <button type="button" class="btn btn-primary bg-color3 border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Agregar Productos
+      </button>
+
+
+    </div>
     <div class="col-8">
       <table class="table">
         <thead>
@@ -53,4 +60,53 @@
     Diseñado con ❤️
   </div>
 </footer>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresar un Producto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+              <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del Producto" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="unidades" class="form-label">Unidades</label>
+              <input type="number" class="form-control" id="unidades" placeholder="Unidades" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input type="number" class="form-control" id="precio" placeholder="Precio" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="descripcionCorta" class="form-label">Descripción Corta</label>
+              <textarea class="form-control" id="descripcionCorta" rows="3" placeholder="Descripción Corta"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="descuento" class="form-label">Descuento (%)</label>
+              <input type="number" class="form-control" id="descuento" placeholder="Descuento (%)">
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Guardar Producto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
